@@ -33,7 +33,7 @@ public class Empregado
 			salarioBruto = 40 * salarioHora + horasExtras * (salarioHora * 0.5 + salarioHora);
 		}
 		else
-			salarioBruto += horasTrabalhadas * salarioHora;
+			salarioBruto = horasTrabalhadas * salarioHora;
 		
 		return salarioBruto;
 	}
