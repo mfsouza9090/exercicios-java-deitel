@@ -6,8 +6,7 @@ public class Exercicio4_19 {
 		CalculadoraComissao cc1 = new CalculadoraComissao();
 		
 		cc1.somaVendas();
-		
-		System.out.printf("Total de vendas: %.2f%n", cc1.getTotalVendas());
+		cc1.rendimentoSemanal();
 	}
 
 }

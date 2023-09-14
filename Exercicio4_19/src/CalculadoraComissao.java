@@ -52,6 +52,11 @@ public class CalculadoraComissao
 				break;
 			}
 		}
-		System.out.printf("O total de vendas é: %.2f%n", totalVendas);
+		input.close();
+	}
+
+	public void rendimentoSemanal()
+	{
+		System.out.printf("Rendimento semanal: %.2f%n", totalVendas * 0.09 + salarioSemanal);
 	}
 }
