@@ -4,7 +4,7 @@
  * horas. Você recebe uma lista de empregados, o número de horas trabalhadas por eles na semana 
  * passada e o salário-hora de cada um. Seu programa deve aceitar a entrada dessas informações 
  * para cada empregado e, então, determinar e exibir o salário bruto do empregado.
- * Utilize a classe Scanner para inserir os dados.*/
+ * Utilize a classe Scanner para inserir os dados. */
 
 import java.util.Scanner;
 
