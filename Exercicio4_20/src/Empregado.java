@@ -6,9 +6,10 @@ public class Empregado
 	private double salarioHora;
 	private double salarioBruto;
 	
-	public Empregado (String nome, double salarioHora)
+	public Empregado (String nome, int horasTrabalhadas, double salarioHora)
 	{
 		this.nome = nome;
+		this.horasTrabalhadas = horasTrabalhadas;
 		this.salarioHora = salarioHora;
 	}
 	
