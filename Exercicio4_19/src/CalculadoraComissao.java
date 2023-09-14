@@ -21,9 +21,30 @@ public class CalculadoraComissao
 	
 	public double getItem4() { return item4; }
 	
-	public double somaVendas()
+	public void somaVendas()
 	{
+		Scanner input = new Scanner(System.in);
+		int valor = 0;
 		
-		return 0.0;
+		while (valor != -1) 
+		{
+			System.out.println("Insira o código correspondente ao item vendido ou -1 para encerrar");
+			valor = input.nextInt();
+			
+			switch (valor)
+			{
+			case 1:
+				totalVendas += item1;
+				break;
+			case 2:
+				totalVendas += item2;
+				break;
+			case 3:
+				totalVendas += item3;
+			case 4:
+				totalVendas += item4;
+			}
+		}
+		System.out.printf("O total de vendas é: %.2f%n", totalVendas);
 	}
 }
