@@ -8,5 +8,4 @@ public class Exercicio4_19 {
 		cc1.somaVendas();
 		cc1.rendimentoSemanal();
 	}
-
 }
