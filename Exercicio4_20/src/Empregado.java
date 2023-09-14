@@ -20,4 +20,16 @@ public class Empregado
 	
 	public double getSalarioBruto() { return salarioBruto; }
 	
+	public void calculaSalarioBruto()
+	{
+		int horasExtras = 0;
+		
+		if (horasTrabalhadas > 40)
+		{
+			horasExtras = horasTrabalhadas - 40;
+			salarioBruto += horasTrabalhadas * salarioHora + horasExtras * (salarioHora * 0.05);
+		}
+		else
+			salarioBruto += horasTrabalhadas * salarioHora;
+	}
 }
