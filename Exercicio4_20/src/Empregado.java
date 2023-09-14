@@ -6,11 +6,9 @@ public class Empregado
 	private double salarioHora;
 	private double salarioBruto;
 	
-	public Empregado (String nome, int horasTrabalhadas, double salarioHora)
+	public Empregado (String nome)
 	{
 		this.nome = nome;
-		this.horasTrabalhadas = horasTrabalhadas;
-		this.salarioHora = salarioHora;
 	}
 	
 	public String getNome() { return nome; }
@@ -21,16 +19,22 @@ public class Empregado
 	
 	public double getSalarioBruto() { return salarioBruto; }
 	
-	public void calculaSalarioBruto()
+	public void setHorasTrabalhadas(int horasTrabalhadas) { this.horasTrabalhadas = horasTrabalhadas; }
+	
+	public void setSalarioHora(double salarioHora) { this.salarioHora = salarioHora; }
+	
+	public double calculaSalarioBruto()
 	{
 		int horasExtras = 0;
 		
 		if (horasTrabalhadas > 40)
 		{
 			horasExtras = horasTrabalhadas - 40;
-			salarioBruto += horasTrabalhadas * salarioHora + horasExtras * (salarioHora * 0.05);
+			salarioBruto = 40 * salarioHora + horasExtras * (salarioHora * 0.5 + salarioHora);
 		}
 		else
 			salarioBruto += horasTrabalhadas * salarioHora;
+		
+		return salarioBruto;
 	}
 }
