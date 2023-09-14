@@ -28,7 +28,7 @@ public class CalculadoraComissao
 		
 		while (valor != -1) 
 		{
-			System.out.println("Insira o código correspondente ao item vendido ou -1 para encerrar");
+			System.out.print("Insira o código correspondente ao item vendido ou -1 para encerrar: ");
 			valor = input.nextInt();
 			
 			switch (valor)
@@ -41,8 +41,15 @@ public class CalculadoraComissao
 				break;
 			case 3:
 				totalVendas += item3;
+				break;
 			case 4:
 				totalVendas += item4;
+				break;
+			case -1:
+				break;
+			default:
+				System.out.println("Insira um código válido\n");
+				break;
 			}
 		}
 		System.out.printf("O total de vendas é: %.2f%n", totalVendas);
