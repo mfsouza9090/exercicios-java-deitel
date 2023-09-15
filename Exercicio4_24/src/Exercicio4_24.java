@@ -21,11 +21,17 @@ public class Exercicio4_24 {
 			int result = input.nextInt();
 			
 			if (result == 1)
+			{
 				passes = passes + 1;
-			else
+				studentCounter = studentCounter + 1;
+			}
+			else if (result == 2)
+			{
 				failures = failures + 1;
-			
-			studentCounter = studentCounter + 1;
+				studentCounter = studentCounter + 1;
+			}
+			else
+				System.out.print("Digite um número válido\n");
 		}
 		
 		System.out.printf("Passed: %d%nFailed: %d%n", passes, failures);
