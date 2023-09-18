@@ -30,6 +30,8 @@ public class Exercicio4_17 {
 			System.out.print("Digite 0 para continuar ou -1 para encerrar o programa: ");
 			flag = input.nextInt();
 			System.out.println();
+			
+			input.close();
 		}
 	}
 }
