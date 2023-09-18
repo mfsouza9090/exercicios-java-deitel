@@ -17,12 +17,19 @@ public class Exercicio4_29 {
 		System.out.print("Insira o tamanho do lado de um quadrado: ");
 		lado = input.nextInt();
 		
+		while (lado < 1 || lado > 20)
+		{
+			System.out.print("Digite um valor válido\n");
+			System.out.print("Insira o tamanho do lado de um quadrado: ");
+			lado = input.nextInt();
+		}
+		
 		while (linha < lado)
 		{
 			int coluna = 0;
 			
 			while (coluna < lado)
-			{
+			{	
 				if (linha == 0 || linha == lado - 1)
 				{
 					System.out.print("* ");
