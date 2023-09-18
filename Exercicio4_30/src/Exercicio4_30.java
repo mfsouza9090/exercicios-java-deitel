@@ -6,11 +6,41 @@
  * cinco dígitos, exiba uma mensagem de erro e permita que o usuário insira 
  * um novo valor. */
 
+import java.util.Scanner;
+
 public class Exercicio4_30 {
 
 	public static void main(String[] args) 
 	{
-
+		Scanner input = new Scanner(System.in);
+		
+		int inputUsuario = 0;
+		int numeroAoContrario = 0;
+		int numeroOriginal = 0;
+		
+		System.out.print("Insira um inteiro de cinco dígitos: ");
+		inputUsuario = input.nextInt();
+		
+		while (inputUsuario > 99999 || inputUsuario < 10000)
+		{
+			System.out.print("Insira um inteiro válido\n");
+			System.out.print("Insira um inteiro de cinco dígitos: ");
+			inputUsuario = input.nextInt();
+		}
+		
+		numeroOriginal = inputUsuario;
+		
+		while (inputUsuario != 0)
+		{
+			int resto = inputUsuario % 10;
+			numeroAoContrario = numeroAoContrario * 10 + resto;
+			inputUsuario = inputUsuario / 10;
+			System.out.printf("resto: %d%nnumero ao contrario: %d%ninputUsuario: %d%n", resto, numeroAoContrario, inputUsuario);
+		}
+		
+		if(numeroOriginal == numeroAoContrario)
+			System.out.printf("%d é um palíndromo", numeroOriginal);
+		else
+			System.out.printf("%d não é um palíndromo", numeroOriginal);
 	}
-
 }
