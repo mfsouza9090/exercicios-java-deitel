@@ -10,20 +10,22 @@
  *  O equivalente decimal do binário 1.101 é 1 * 1 + 0 * 2 + 1 * 4 + 1 * 8 ou 1 + 0 + 4 + 8 
  *  ou 13.] */
 
-public class Exercicio4_31 {
-
+public class Exercicio4_31 
+{
 	public static void main(String[] args) 
 	{
-		int binarioOriginal = 1101;
-		int binarioAoContrario = 0;
-		int fator = 0;
-		
+		int binarioOriginal = 10101001;
+		int fator = 1;
+		int decimal = 0;
 		
 		while (binarioOriginal != 0)
 		{
 			int resto = binarioOriginal % 10;
-			binarioAoContrario = binarioAoContrario * 10 + resto;
 			binarioOriginal = binarioOriginal / 10;
+			decimal += resto * fator;
+			fator *= 2;
 		}
+		
+		System.out.printf("Número binário convertido em decimal: %d", decimal);
 	}
 }
