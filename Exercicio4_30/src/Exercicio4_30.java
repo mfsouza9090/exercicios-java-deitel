@@ -35,10 +35,9 @@ public class Exercicio4_30 {
 			int resto = inputUsuario % 10;
 			numeroAoContrario = numeroAoContrario * 10 + resto;
 			inputUsuario = inputUsuario / 10;
-			System.out.printf("resto: %d%nnumero ao contrario: %d%ninputUsuario: %d%n", resto, numeroAoContrario, inputUsuario);
 		}
 		
-		if(numeroOriginal == numeroAoContrario)
+		if (numeroOriginal == numeroAoContrario)
 			System.out.printf("%d é um palíndromo", numeroOriginal);
 		else
 			System.out.printf("%d não é um palíndromo", numeroOriginal);
