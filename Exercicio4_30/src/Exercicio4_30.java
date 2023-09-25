@@ -42,5 +42,7 @@ public class Exercicio4_30 {
 			System.out.printf("%d é um palíndromo", numeroOriginal);
 		else
 			System.out.printf("%d não é um palíndromo", numeroOriginal);
+		
+		input.close();
 	}
 }
