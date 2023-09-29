@@ -48,7 +48,7 @@ public abstract class Pessoa
 	public abstract float salario();
 				
 	// cria uma lista vazia
-	List<String> telefones = new ArrayList<>();
+	List<String> telefones = new ArrayList<String>();
 				
 	public void AddTel(String tel)
 	{

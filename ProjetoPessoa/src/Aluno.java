@@ -32,8 +32,8 @@ public class Aluno extends Pessoa
 	// java.lang.Package
 	public String toString()
 	{
-		return String.format(super.toString(), 
-				"RA: %s%nCurso: %s%n",
-				Ra, Curso);
+		return String.format( 
+				"%sRA: %s%nCurso: %s",
+				super.toString(), Ra, Curso);
 	}
 }

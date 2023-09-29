@@ -34,8 +34,8 @@ public class Professor extends Pessoa
 
 	public String toString()
 	{
-		return String.format(super.toString(), 
-				"%nRegistro Funcional: %s%nFormação: %s%n", 
-				RegFunc, Formacao);
+		return String.format(
+				"%sRegistro Funcional: %s%nFormação: %s", 
+				super.toString(), RegFunc, Formacao);
 	}
 }

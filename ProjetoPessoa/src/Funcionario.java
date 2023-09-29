@@ -29,7 +29,8 @@ public class Funcionario extends Pessoa
 	public void setRegFunc(String regFunc) { this.RegFunc = regFunc; }
 	
 	// este método set lança uma exceção caso o valor de
-	// cargo seja nulo ou uma string vazia
+	// cargo (properieda) seja setado como nulo ou uma 
+	// string vazia
 	public void setCargo(String cargo) throws Exception
 	{
 		if (cargo == null || cargo == "")
@@ -51,8 +52,7 @@ public class Funcionario extends Pessoa
 	// sobrescrita do método toString da classe java.lang.Package
 	public String toString()
 	{
-		return String.format(super.toString(), 
-				"Data de admissão: %s%nRegistro Funcional: %s%n",
-				DataAdmissao, RegFunc);
+		return String.format("%sData de admissão: %s%nRegistro Funcional: %s%nCargo: %s",
+				super.toString(),DataAdmissao, RegFunc, cargo);
 	}
 }
