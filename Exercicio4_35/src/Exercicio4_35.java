@@ -60,5 +60,7 @@ public class Exercicio4_35
 		{
 			System.out.println("Os três lados não podem formar um triângulo");
 		}
+		
+		input.close();
 	}
 }
