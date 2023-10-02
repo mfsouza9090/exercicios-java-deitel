@@ -59,5 +59,7 @@ public class Exercicio4_36
 		{
 			System.out.print("Os inteiros inseridos não podem representar os lados de um triângulo retângulo");
 		}
+		
+		input.close();
 	}
 }
