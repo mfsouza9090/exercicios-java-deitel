@@ -16,10 +16,24 @@
  * c) Escreva um aplicativo que computa o valor de e ao quadrado. Permita ao usuário 
  * inserir o número de termos a calcular. */
 
+import java.util.Scanner;
+
 public class Exercicio4_37 
 {
 	public static void main(String[] args) 
 	{
-
+		Scanner input = new Scanner(System.in);
+		int numero = 0;
+		int produto = 0;
+		
+		System.out.print("Insira um inteiro positivo: ");
+		numero = input.nextInt();
+		
+		while (numero <= 0)
+		{
+			System.out.println("Inpu inválido");
+			System.out.print("Insira um inteiro positivo: ");
+			numero = input.nextInt();
+		}
 	}
 }
