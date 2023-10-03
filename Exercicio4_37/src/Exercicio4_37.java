@@ -10,11 +10,16 @@
  * por exemplo, 5! = 5 · 4 · 3 · 2 · 1, o que dá 120.
  * 
  * a) Escreva um aplicativo que lê um inteiro não negativo, calcula e imprime 
- * seu fatorial.
- * b) Escreva um aplicativo que estima o valor da constante matemática. Permita ao 
- * usuário inserir o número de termos a calcular.
- * c) Escreva um aplicativo que computa o valor de e ao quadrado. Permita ao usuário 
- * inserir o número de termos a calcular. */
+ *    seu fatorial.
+ * b) Escreva um aplicativo que estima o valor da constante matemática "e" utilizando
+ *    a fórmula a seguir. Permita ao usuário inserir o número de termos a calcular.
+ *    
+ *    e = 1 + 1/1! + 1/2! + 1/3! + ...
+ *    
+ * c) Escreva um aplicativo que computa o valor de "e" elevado a "x". Permita ao usuário 
+ *    inserir o número de termos a calcular. 
+ *    
+ *    e elevado a x = 1 + x/1! + x elevado ao quadrado/2! + x elevado ao cubo/3! + ... */
 
 import java.util.Scanner;
 
@@ -24,9 +29,6 @@ public class Exercicio4_37
 	{
 		Scanner input = new Scanner(System.in);
 		int numeroUsuario = 0;
-		int numeroOriginal = 0;
-		int decrementador = 0;
-		
 		
 		System.out.print("Insira um inteiro positivo: ");
 		numeroUsuario = input.nextInt();
@@ -38,8 +40,8 @@ public class Exercicio4_37
 			numeroUsuario = input.nextInt();
 		}
 		
-		decrementador = numeroUsuario;
-		numeroOriginal = numeroUsuario;
+		int numeroOriginal = numeroUsuario;
+		int decrementador = numeroUsuario;
 		
 		while (decrementador > 1)
 		{
@@ -48,5 +50,7 @@ public class Exercicio4_37
 		}
 		
 		System.out.printf("%d! = %d%n", numeroOriginal, numeroUsuario);
+		
+		input.close();
 	}
 }
