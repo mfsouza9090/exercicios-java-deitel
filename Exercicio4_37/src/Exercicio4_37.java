@@ -24,8 +24,8 @@ public class Exercicio4_37
 	{
 		Scanner input = new Scanner(System.in);
 		int numeroUsuario = 0;
-		int fatorial = 0;
-		int contador = 0;
+		int numeroOriginal = 0;
+		int decrementador = 0;
 		
 		
 		System.out.print("Insira um inteiro positivo: ");
@@ -38,15 +38,15 @@ public class Exercicio4_37
 			numeroUsuario = input.nextInt();
 		}
 		
-		fatorial = numeroUsuario;
-		contador = numeroUsuario;
+		decrementador = numeroUsuario;
+		numeroOriginal = numeroUsuario;
 		
-		while (contador > 1)
+		while (decrementador > 1)
 		{
-			fatorial = fatorial * (numeroUsuario - 1);
-			--numeroUsuario;
-			--contador;
-			System.out.println(fatorial);
+			numeroUsuario = numeroUsuario * (decrementador - 1);
+			--decrementador;
 		}
+		
+		System.out.printf("%d! = %d%n", numeroOriginal, numeroUsuario);
 	}
 }
