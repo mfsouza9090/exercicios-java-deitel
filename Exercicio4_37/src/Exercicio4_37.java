@@ -23,17 +23,30 @@ public class Exercicio4_37
 	public static void main(String[] args) 
 	{
 		Scanner input = new Scanner(System.in);
-		int numero = 0;
-		int produto = 0;
+		int numeroUsuario = 0;
+		int fatorial = 0;
+		int contador = 0;
+		
 		
 		System.out.print("Insira um inteiro positivo: ");
-		numero = input.nextInt();
+		numeroUsuario = input.nextInt();
 		
-		while (numero <= 0)
+		while (numeroUsuario <= 0)
 		{
 			System.out.println("Inpu inválido");
 			System.out.print("Insira um inteiro positivo: ");
-			numero = input.nextInt();
+			numeroUsuario = input.nextInt();
+		}
+		
+		fatorial = numeroUsuario;
+		contador = numeroUsuario;
+		
+		while (contador > 1)
+		{
+			fatorial = fatorial * (numeroUsuario - 1);
+			--numeroUsuario;
+			--contador;
+			System.out.println(fatorial);
 		}
 	}
 }
