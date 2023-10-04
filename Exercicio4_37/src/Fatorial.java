@@ -2,7 +2,7 @@
 
 public class Fatorial 
 {
-	public static int retornaFatorial(int inteiroPositivo)
+	public static int calculaFatorial(int inteiroPositivo)
 	{
 		int decrementador = inteiroPositivo;
 		

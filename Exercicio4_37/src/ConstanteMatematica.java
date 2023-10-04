@@ -8,7 +8,7 @@ public class ConstanteMatematica
 		
 		while (contador <= termos)
 		{
-			int fatorial = Fatorial.retornaFatorial(contador);
+			int fatorial = Fatorial.calculaFatorial(contador);
 			e += 1 / (double) fatorial;
 			++contador;
 		}
