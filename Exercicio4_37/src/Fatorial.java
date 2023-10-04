@@ -1,3 +1,5 @@
+// Exercício A: 
+
 public class Fatorial 
 {
 	public static int retornaFatorial(int inteiroPositivo)

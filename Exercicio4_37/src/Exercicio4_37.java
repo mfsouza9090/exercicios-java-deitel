@@ -40,16 +40,7 @@ public class Exercicio4_37
 			numeroUsuario = input.nextInt();
 		}
 		
-		int numeroOriginal = numeroUsuario;
-		int decrementador = numeroUsuario;
-		
-		while (decrementador > 1)
-		{
-			numeroUsuario = numeroUsuario * (decrementador - 1);
-			--decrementador;
-		}
-		
-		System.out.printf("%d! = %d%n", numeroOriginal, numeroUsuario);
+		System.out.print(Fatorial.retornaFatorial(numeroUsuario));
 		
 		input.close();
 	}
