@@ -1,20 +1,26 @@
 
 public class ConstanteMatematicaPotencia 
 {
-	public static double calculaConstantePotencia(int termos)
-	{
+	public static double calculaConstantePotencia(int base, int termos)
+	{	
+		double ex = 1 + base;
+		double acumulador = base;
+		int contador = 2;
+		int contadorAuxiliar = 1;
 		
-		int x = 2;
-		double ex = 1 + x;
-		int contador = 1;
-		
-		while (contador < termos)
-		{
-			int fatorial = Fatorial.calculaFatorial(contador);
-			
-			ex += x * x / (double) fatorial;
+		while (contador <= termos)
+		{	
+			while (contadorAuxiliar > 0)
+			{
+				acumulador *= base;
+				--contadorAuxiliar;
+			}
+	
+			ex += acumulador / Fatorial.calculaFatorial(contador);
+			++contador;
+			++contadorAuxiliar;
 		}
 		
-		return 0;
+		return ex;
 	}
 }
