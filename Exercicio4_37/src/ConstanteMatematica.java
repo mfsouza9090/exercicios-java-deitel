@@ -1,3 +1,4 @@
+// Exercício B:
 
 public class ConstanteMatematica 
 {
@@ -8,8 +9,7 @@ public class ConstanteMatematica
 		
 		while (contador <= termos)
 		{
-			int fatorial = Fatorial.calculaFatorial(contador);
-			e += 1 / (double) fatorial;
+			e += 1 / Fatorial.calculaFatorial(contador);;
 			++contador;
 		}
 		

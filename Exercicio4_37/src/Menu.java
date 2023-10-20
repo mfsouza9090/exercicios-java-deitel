@@ -74,6 +74,11 @@ public class Menu
 			System.out.printf("Valor de e^%d: %.9f", expoente, 
 					ConstanteMatematicaPotencia.calculaConstantePotencia(expoente, qtdTermos));
 		}
+		else if (menuInput == 4)
+		{
+			System.out.print("Obrigado por usar o programa");
+			System.exit(0);
+		}
 		
 		input.close();
 	}
