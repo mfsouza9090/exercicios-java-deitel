@@ -11,15 +11,15 @@
  * 
  * a) Escreva um aplicativo que lê um inteiro não negativo, calcula e imprime 
  *    seu fatorial.
- * b) Escreva um aplicativo que estima o valor da constante matemática "e" utilizando
+ * b) Escreva um aplicativo que estima o valor da constante matemática e utilizando
  *    a fórmula a seguir. Permita ao usuário inserir o número de termos a calcular.
  *    
  *    e = 1 + 1/1! + 1/2! + 1/3! + ...
  *    
- * c) Escreva um aplicativo que computa o valor de "e" elevado a "x". Permita ao usuário 
+ * c) Escreva um aplicativo que computa o valor de e^(x). Permita ao usuário 
  *    inserir o número de termos a calcular. 
  *    
- *    e elevado a x = 1 + x/1! + x elevado ao quadrado/2! + x elevado ao cubo/3! + ... */
+ *    e^(x) = 1 + x/1! + x^(2)/2! + x^(3)/3! + ... */
 
 public class Exercicio4_37 
 {

@@ -11,7 +11,7 @@ public class Menu
 		System.out.println("Menu"
 				+ "\n1 - Fatorial (Subexercício A)"
 				+ "\n2 - Constante matemática de e (Subexercício B)"
-				+ "\n3 - Valor de e elevado a x (Subexercício C)"
+				+ "\n3 - Valor de e^(x) (Subexercício C)"
 				+ "\n4 - Sair\n");
 		
 		menuInput = input.nextInt();
@@ -46,7 +46,7 @@ public class Menu
 				qtdTermos = input.nextInt();
 			}
 			
-			System.out.printf("Valor da constante matemática e: %.2f", 
+			System.out.printf("Valor da constante matemática e: %.9f", 
 					ConstanteMatematica.calculaConstante(qtdTermos));
 		}
 		
