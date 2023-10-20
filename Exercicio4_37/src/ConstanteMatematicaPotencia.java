@@ -17,7 +17,7 @@ public class ConstanteMatematicaPotencia
 				--contadorAuxiliar;
 			}
 	
-			ex += acumulador / Fatorial.calculaFatorial(contador);
+			ex += acumulador / (double) Fatorial.calculaFatorial(contador);
 			++contador;
 			++contadorAuxiliar;
 		}

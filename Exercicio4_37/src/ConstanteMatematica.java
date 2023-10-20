@@ -9,7 +9,7 @@ public class ConstanteMatematica
 		
 		while (contador <= termos)
 		{
-			e += 1 / Fatorial.calculaFatorial(contador);;
+			e += 1 / (double) Fatorial.calculaFatorial(contador);;
 			++contador;
 		}
 		

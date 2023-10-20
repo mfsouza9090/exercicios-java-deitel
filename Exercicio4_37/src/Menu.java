@@ -79,6 +79,12 @@ public class Menu
 			System.out.print("Obrigado por usar o programa");
 			System.exit(0);
 		}
+		else 
+		{
+			System.out.println("Input inválido");
+			System.out.println("Digite um comando válido");
+			acionaMenu();
+		}
 		
 		input.close();
 	}
