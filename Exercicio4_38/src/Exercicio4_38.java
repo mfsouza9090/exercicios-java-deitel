@@ -52,7 +52,7 @@ public class Exercicio4_38 {
 			// criptografa o dígito isolado de acordo
 			// c/ a proposta do exercício, multiplica-o
 			// por 1000, 100, 10 e 1 (nesta ordem, a cada
-			// iteração) e acumula o valor
+			// iteração) e acumula o valor na variável final
 			dadoCriptografado += ((digitoUnico + 7) % 10) * multiploDeDez;
 			multiploDeDez /= 10;
 			++contador;
