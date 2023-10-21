@@ -22,7 +22,8 @@ public class Exercicio4_38 {
 		Scanner input = new Scanner(System.in);
 		int contador = 0;
 		int dado;
-		int digitosAlternados;
+		int digitosAlternados = 0;
+		int dadoCriptografado = 0;
 		
 		System.out.print("Insira um inteiro de quatro dígitos: ");
 		dado = input.nextInt();
@@ -38,23 +39,28 @@ public class Exercicio4_38 {
 		// e o segundo dígito pelo quarto
 		while (contador < 2)
 		{
-			digitosAlternados = dado % 100;
+			int resto = dado % 100;
+			digitosAlternados = digitosAlternados * 100 + resto;
 			dado /= 100;
-			System.out.println(digitosAlternados);
 			++contador;
 		}
 		
 		contador = 0;
+		int divisor = 1000;
 		
-		/* while (contador < 4)
+		// adiciona 7 e realiza a operação de módulo
+		// por 10 para cada dígito 
+		while (contador < 4)
 		{
 			int digitoUnico;
-			digitoUnico = novoDado / 1000;
-			novoDado %= 10;
-			System.out.println(digitoUnico);
-			System.out.print(novoDado);
+			digitoUnico = digitosAlternados / divisor;
+			digitosAlternados %= divisor;
+			dadoCriptografado += ((digitoUnico + 7) % 10) * divisor;
+			divisor /= 10;
 			++contador;
-		} */
+		}
+		
+		System.out.print(dadoCriptografado);
 		
 		input.close();
 	}
