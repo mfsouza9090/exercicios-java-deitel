@@ -20,10 +20,12 @@ public class Exercicio4_38 {
 	public static void main(String[] args) 
 	{
 		Scanner input = new Scanner(System.in);
-		int contador = 0;
+		
 		int dado;
+		int contador = 0;
 		int digitosAlternados = 0;
 		int dadoCriptografado = 0;
+		int multiploDeDez = 1000;
 		
 		System.out.print("Insira um inteiro de quatro dígitos: ");
 		dado = input.nextInt();
@@ -35,33 +37,43 @@ public class Exercicio4_38 {
 			dado = input.nextInt();
 		}
 		
+		System.out.println(dado);
+		
+		while (contador < 4)
+		{
+			int digitoUnico;
+			// isola o primeiro dígito e armazena-o
+			// em uma nova variável
+			digitoUnico = dado / multiploDeDez;
+			// elimina o primeiro dígito da variável original
+			// contendo o dado com os dígitos alternados,
+			// atualizando-o p/ a próxima iteração
+			dado %= multiploDeDez;
+			// criptografa o dígito isolado de acordo
+			// c/ a proposta do exercício, multiplica-o
+			// por 1000, 100, 10 e 1 (nesta ordem, a cada
+			// iteração) e acumula o valor
+			dadoCriptografado += ((digitoUnico + 7) % 10) * multiploDeDez;
+			multiploDeDez /= 10;
+			++contador;
+		}
+		
+		System.out.println(dadoCriptografado);
+		
+		contador = 0;
+		
 		// troca o primeiro dígito pelo terceiro
 		// e o segundo dígito pelo quarto
 		while (contador < 2)
 		{
-			int resto = dado % 100;
+			int resto = dadoCriptografado % 100;
 			digitosAlternados = digitosAlternados * 100 + resto;
-			dado /= 100;
+			dadoCriptografado /= 100;
 			++contador;
 		}
 		
-		contador = 0;
-		int divisor = 1000;
-		
-		// adiciona 7 e realiza a operação de módulo
-		// por 10 para cada dígito 
-		while (contador < 4)
-		{
-			int digitoUnico;
-			digitoUnico = digitosAlternados / divisor;
-			digitosAlternados %= divisor;
-			dadoCriptografado += ((digitoUnico + 7) % 10) * divisor;
-			divisor /= 10;
-			++contador;
-		}
-		
-		System.out.print(dadoCriptografado);
-		
+		System.out.print(digitosAlternados);
+
 		input.close();
 	}
 }
