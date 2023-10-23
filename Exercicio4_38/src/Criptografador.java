@@ -1,6 +1,6 @@
 public class Criptografador 
 {
-	public static int criptografador (int dado)
+	public static void criptografador (int dado)
 	{
 		int dadoOriginal = dado;
 		int contador = 0;
@@ -38,6 +38,17 @@ public class Criptografador
 			++contador;
 		}
 		
-		return digitosAlternados;
+		// se a variável digitosAlternados tiver apenas 3 dígitos,
+		// significa que o primeiro dígito à esquerda era 0 e não foi
+		// preservado; a instrução de seleção abaixo garante que o 0
+		// esteja lá
+		if (digitosAlternados < 1000)
+		{
+			System.out.printf("Dado criptografado: %04d%n", digitosAlternados);
+		}
+		else
+		{
+			System.out.printf("Dado criptografado: %d%n", digitosAlternados);
+		}
 	}
 }

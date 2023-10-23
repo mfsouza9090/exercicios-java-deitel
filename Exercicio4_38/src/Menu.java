@@ -23,8 +23,7 @@ public class Menu
 			
 			dadoOriginal = Validador.validador(dadoOriginal);
 			
-			System.out.printf("Dado criptografado: %d%n", 
-					          Criptografador.criptografador(dadoOriginal));
+		    Criptografador.criptografador(dadoOriginal);
 		}
 		else if (resposta == 2)
 		{

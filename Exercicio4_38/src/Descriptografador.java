@@ -18,6 +18,10 @@ public class Descriptografador
 		
 		contador = 0;
 		
+		// o procedimento é semelhante ao estabelecido
+		// no método criptografador da classe Criptografador;
+		// a única diferença é a operação matemática para 
+		// reestabelecer o valor dos dígitos originais
 		while (contador < 4)
 		{
 			int digitoUnico;
