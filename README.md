@@ -1,11 +1,6 @@
-      _                             
-   _ | |   __ _     __ __    __ _   
-  | || |  / _` |    \ V /   / _` |  
-  _\__/   \__,_|    _\_/_   \__,_|  
-_|"""""| _|"""""| _|"""""| _|"""""| 
-"`-0-0-' "`-0-0-' "`-0-0-' "`-0-0-'                        
+# JAVA - COMO PROGRAMAR
 
-## #---PROPOSTA---#
+## PROPOSTA
 
 - Objetivando adquirir fundações sólidas em Java, estou lendo e resolvendo os exercícios do livro **Java - Como programar
   (10ª edição), de Paul & Harvey Deitel**
@@ -20,6 +15,6 @@ _|"""""| _|"""""| _|"""""| _|"""""|
   de repetição que não esta. Entendo que há formas mais otimizadas de solucionar os exercícios, e às vezes até sei como empregá-las, 
   mas **optei por ser coerente com o ritmo de aprendizado pretendido pelos autores**.
 
-## ---CAPÍTULOS E TEMAS---#
+## CAPÍTULOS E TEMAS
 
 1. Capítulo 4  - Instruções de controle: parte 1; operadores de atribuição ++ e --#
