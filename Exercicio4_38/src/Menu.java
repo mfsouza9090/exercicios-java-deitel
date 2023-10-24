@@ -16,6 +16,17 @@ public class Menu
 		
 		if (resposta == 1)
 		{
+			// armazena o input em uma variável do tipo String
+			// para que o método validador possa verificar se 
+			// o mesmo possui quatro dígitos; caso true, ele 
+			// converte e retorna o valor em uma variável
+			// do tipo int. se o input fosse armazenado diretamente
+			// em uma variável do tipo int e o primeiro dígito
+			// à esquerda fosse 0 (uma ação válida), o programa
+			// consideraria apenas 3 dígitos e o input, embora
+			// legítimo, não seria validado. para maiores
+			// esclarecimentos, consultar o método validador da
+			// classe Validador
 			String dadoOriginal = "";
 			int dadoOriginalInt;
 			

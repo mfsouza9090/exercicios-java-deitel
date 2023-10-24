@@ -16,6 +16,8 @@ public class Descriptografador
 			++contador;
 		}
 		
+		System.out.println(digitosAlternados);
+		
 		contador = 0;
 		
 		// o procedimento é semelhante ao estabelecido
@@ -28,9 +30,22 @@ public class Descriptografador
 			
 			digitoUnico = digitosAlternados / multiploDeDez;
 			digitosAlternados %= multiploDeDez;
-			dadoDescriptografado += (digitoUnico - 7 + 10) * multiploDeDez;
+			// os dígitos isolados 7, 8 e 9 produzem os resultados 10, 11 e 12, 
+			// que, sem a operação módulo, geram distorção no valor final
+			// do dado descriptografado. o bloco abaixo garante que o valor final
+			// do dado descriptografado seja legítimo
+			if (digitoUnico > 6 || digitoUnico < 10 )
+			{
+				dadoDescriptografado += ((digitoUnico - 7 + 10) % 10) * multiploDeDez;
+			}
+			else 
+			{
+				dadoDescriptografado += (digitoUnico - 7 + 10) * multiploDeDez;
+			}
+			
 			multiploDeDez /= 10;
 			++contador;
+			System.out.println(dadoDescriptografado);
 		} 
 		
 		return dadoDescriptografado;
