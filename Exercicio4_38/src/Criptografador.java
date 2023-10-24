@@ -28,8 +28,13 @@ public class Criptografador
 		
 		contador = 0;
 		
-		// troca o primeiro dígito pelo terceiro
-		// e o segundo dígito pelo quarto
+		// na primeira iteração, os dois dígitos à direita
+		// são isolados a partir de uma operação módulo e o resultado
+		// é armazenado na variável digitosAlternados. na segunda 
+		// iteração, o valor de digitosAlternados é multiplicado por 100
+		// (originando um inteiro de quatro dígitos) e somado aos dois dígitos
+		// restantes, produzindo o dado criptografado com as posições alteradas
+		// conforme a proposta do exercício
 		while (contador < 2)
 		{
 			int resto = dadoCriptografado % 100;
@@ -38,9 +43,9 @@ public class Criptografador
 			++contador;
 		}
 		
-		// se a variável digitosAlternados tiver apenas 3 dígitos,
+		// se a variável digitosAlternados tiver 3 dígitos,
 		// significa que o primeiro dígito à esquerda era 0 e não foi
-		// preservado; a instrução de seleção abaixo garante que o 0
+		// preservado; a instrução if abaixo garante que o 0
 		// esteja lá
 		if (digitosAlternados < 1000)
 		{

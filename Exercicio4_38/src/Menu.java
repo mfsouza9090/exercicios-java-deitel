@@ -24,9 +24,7 @@ public class Menu
 			// em uma variável do tipo int e o primeiro dígito
 			// à esquerda fosse 0 (uma ação válida), o programa
 			// consideraria apenas 3 dígitos e o input, embora
-			// legítimo, não seria validado. para maiores
-			// esclarecimentos, consultar o método validador da
-			// classe Validador
+			// legítimo, não seria validado
 			String dadoOriginal = "";
 			int dadoOriginalInt;
 			
