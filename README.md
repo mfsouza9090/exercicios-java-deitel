@@ -7,6 +7,8 @@
 
 - Os subdiretórios contendo os exercícios solucionados são nomeados da seguinte forma: **Exercício<Nº-do-capítulo>_<Nº-do-exercício>**
 
+- O enunciado do exercício consta como um texto comentado no topo da classe que contém o método main
+
 - Comecei a resolver os exercícios a partir do capítulo 4, momento em que os mesmos ficaram mais desafiadores e substanciais
 
 - **IMPORTANTE**: 
@@ -15,6 +17,8 @@
   de repetição que não esta. Entendo que há formas mais otimizadas de solucionar os exercícios, e às vezes até sei como empregá-las, 
   mas **optei por ser coerente com o ritmo de aprendizado pretendido pelos autores**.
 
+- Os códigos não comentados serão comentados muito em breve
+
 ## CAPÍTULOS E TEMAS
 
-1. Capítulo 4  - Instruções de controle: parte 1; operadores de atribuição ++ e --#
+1. Capítulo 4  - Instruções de controle: parte 1; operadores de atribuição ++ e --
