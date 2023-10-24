@@ -16,26 +16,28 @@ public class Menu
 		
 		if (resposta == 1)
 		{
-			int dadoOriginal = 0;
+			String dadoOriginal = "";
+			int dadoOriginalInt;
 			
 			System.out.print("Insira um inteiro de quatro dígitos: ");
-			dadoOriginal = input.nextInt();
+			dadoOriginal = input.next();
 			
-			dadoOriginal = Validador.validador(dadoOriginal);
+			dadoOriginalInt = Validador.validador(dadoOriginal);
 			
-		    Criptografador.criptografador(dadoOriginal);
+		    Criptografador.criptografador(dadoOriginalInt);
 		}
 		else if (resposta == 2)
 		{
-			int dadoOriginal = 0;
+			String dadoOriginal = "";
+			int dadoOriginalInt;
 			
 			System.out.print("Insira um dado (inteiro de quatro dígitos) criptografado: ");
-			dadoOriginal = input.nextInt();
+			dadoOriginal = input.next();
 			
-			dadoOriginal = Validador.validador(dadoOriginal);
+			dadoOriginalInt = Validador.validador(dadoOriginal);
 			
 			System.out.printf("Dado descriptografado: %d%n", 
-					          Descriptografador.descriptografador(dadoOriginal));
+					          Descriptografador.descriptografador(dadoOriginalInt));
 		}
 		else if (resposta == 3)
 		{
