@@ -15,7 +15,7 @@
   Cabe explicar que, **para resolver os exercícios, utilizo apenas os recursos ensinados até o capítulo em questão**. Ex.: até o
   capítulo 4, somente uma instrução de repetição foi apresentada (while). Assim, na seção prática, evito utilizar outras instruções
   de repetição que não esta. Entendo que há formas mais otimizadas de solucionar os exercícios, e às vezes até sei como empregá-las, 
-  mas **optei por ser coerente com o ritmo de aprendizado pretendido pelos autores**.
+  mas **optei por ser coerente com o ritmo de aprendizado pretendido pelos autores**
 
 - Os códigos não comentados serão comentados muito em breve
 
