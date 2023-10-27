@@ -25,7 +25,8 @@ public class Exercicio4_39
 	public static void main(String[] args) 
 	{
 		long populacaoMundial2022 = 7951000000L;
-		double taxaCrescimento = 0.8;
+		double popAnoAnterior = populacaoMundial2022;
+		double taxaCrescimento = 0.008;
 		int anoCorrente = 2023;
 		int contador = 0;
 		
@@ -35,7 +36,14 @@ public class Exercicio4_39
 		
 		while (contador <= 75)
 		{
-			System.out.printf("| %d | %d | %d |%n", anoCorrente, anoCorrente, anoCorrente);
+			double popAnoCorrente;
+			double aumentoAno;
+			
+			popAnoCorrente = popAnoAnterior * taxaCrescimento + popAnoAnterior;
+			aumentoAno = popAnoCorrente - popAnoAnterior;
+			popAnoAnterior = popAnoCorrente;
+				
+			System.out.printf("| %d | %.0f | %.0f |%n", anoCorrente, popAnoCorrente, aumentoAno );
 			++contador;
 			++anoCorrente;
 		}
