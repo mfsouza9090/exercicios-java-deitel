@@ -28,13 +28,17 @@ public class Exercicio4_39
 		double popAnoAnterior = populacaoMundial2022;
 		double taxaCrescimento = 0.008;
 		int anoCorrente = 2023;
-		int contador = 0;
+		int flag = 1;
 		
-		System.out.printf(" --------------------%n");
-		System.out.printf("| %-4s | %-4s | %4s |%n", "ANO", "POP.", "AUM.");
-		System.out.printf(" --------------------%n");
+		System.out.printf(" -------------------------------- %n");
+		System.out.printf("|    Crescimento demográfico     |%n");
+		System.out.printf("|        anual até 2098          |%n");
+		System.out.printf(" -------------------------------- %n");
+		System.out.printf(" --------------------------------%n");
+		System.out.printf("| %s  |  %s  |  %s  |%n", "ANO", "POPULAÇÃO", "AUMENTO");
+		System.out.printf(" --------------------------------%n");
 		
-		while (contador <= 75)
+		while (flag != -1)
 		{
 			double popAnoCorrente;
 			double aumentoAno;
@@ -42,12 +46,25 @@ public class Exercicio4_39
 			popAnoCorrente = popAnoAnterior * taxaCrescimento + popAnoAnterior;
 			aumentoAno = popAnoCorrente - popAnoAnterior;
 			popAnoAnterior = popAnoCorrente;
+			
+			// este bloco printa os dados até 2098, 
+			// de acordo c/ a proposta do exercício
+			if (anoCorrente <= 2098)
+			{
+				System.out.printf("| %d | %11.0f | %9.0f |%n", anoCorrente, popAnoCorrente, aumentoAno );
+				++anoCorrente;
+			}
+			// este bloco é executado quando a população dobra
+			// em relação ao primeiro valor, printando o ano
+			// e o número de habitantes
+			else if (popAnoCorrente >= populacaoMundial2022 * 2)
+			{
+				System.out.printf(" --------------------------------%n");
+				System.out.printf("\nAno em que a população mundial dobrará de tamanho: %d, com %11.0f habitantes", 
+						anoCorrente, popAnoCorrente);
 				
-			System.out.printf("| %d | %.0f | %.0f |%n", anoCorrente, popAnoCorrente, aumentoAno );
-			++contador;
-			++anoCorrente;
+				flag = -1;
+			}
 		}
-		
-		System.out.printf(" --------------------%n");
 	}
 }
