@@ -10,6 +10,10 @@ public class Exercicio5_13 {
 
 	public static void main(String[] args) 
 	{
+		System.out.println(" #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#");
+		System.out.printf("|   %8s   |      %-13s   |%n", "Fatorial", "Resultado");
+		System.out.println(" #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#");
+		
 		for (int contador = 1; contador <= 20; contador++)
 		{
 			long fatorial = contador;
@@ -21,7 +25,9 @@ public class Exercicio5_13 {
 				--decrementador;
 			}
 			
-			System.out.printf("%d! = %d%n", contador, fatorial);
+			System.out.printf("|  %4d!       | %-19d  |%n", contador, fatorial);
 		}
+		
+		System.out.println(" #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#");
 	}
 }
