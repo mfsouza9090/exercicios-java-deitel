@@ -42,16 +42,30 @@ public class Exercicio5_15
 			System.out.println();
 		}
 		
+		System.out.println();
+		
 		// c)
 		for (int contador = 10; contador > 0; contador--)
 		{
-			int contadorAux = contador;
+			int asteriscos = contador;
+			// o número de espaços em branco é calculado
+			// a partir do contador do loop for externo:
+			// 0 na primeira iteração, 1 na segunda, 2
+			// na terceira e assim por diante
+			int espacos = 9 - (contador - 1);
 			
-			while (contadorAux > 0)
+			while (espacos > 0)
+			{
+				System.out.print(" ");
+				espacos--;
+			}
+			
+			while (asteriscos > 0)
 			{
 				System.out.print("*");
-				contadorAux--;
+				asteriscos--;
 			}
+		
 			System.out.println();
 		}
 	}
