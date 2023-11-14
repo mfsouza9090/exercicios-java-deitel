@@ -6,8 +6,8 @@
  * tipo long. Exiba os resultados em formato tabular. Que 
  * dificuldade poderia impedir você de calcular o fatorial de 100? */ 
 
-public class Exercicio5_13 {
-
+public class Exercicio5_13 
+{
 	public static void main(String[] args) 
 	{
 		System.out.println(" #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#");
