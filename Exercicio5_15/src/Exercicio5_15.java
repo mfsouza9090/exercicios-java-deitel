@@ -68,5 +68,28 @@ public class Exercicio5_15
 		
 			System.out.println();
 		}
+		
+		System.out.println();
+		
+		// d)
+		for (int contador = 1; contador <= 10; contador++)
+		{
+			int asteriscos = contador;
+			int espacos = 10 - contador;
+			
+			while (espacos > 0)
+			{
+				System.out.print(" ");
+				espacos--;
+			}
+			
+			while (asteriscos > 0)
+			{
+				System.out.print("*");
+				asteriscos--;
+			}
+		
+			System.out.println();
+		}
 	}
 }
