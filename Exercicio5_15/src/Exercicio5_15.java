@@ -26,5 +26,33 @@ public class Exercicio5_15
 			}
 			System.out.println();
 		}
+		
+		System.out.println();
+		
+		// b)
+		for (int contador = 10; contador > 0; contador--)
+		{
+			int contadorAux = contador;
+			
+			while (contadorAux > 0)
+			{
+				System.out.print("*");
+				contadorAux--;
+			}
+			System.out.println();
+		}
+		
+		// c)
+		for (int contador = 10; contador > 0; contador--)
+		{
+			int contadorAux = contador;
+			
+			while (contadorAux > 0)
+			{
+				System.out.print("*");
+				contadorAux--;
+			}
+			System.out.println();
+		}
 	}
 }
