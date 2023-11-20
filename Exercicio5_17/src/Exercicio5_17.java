@@ -21,11 +21,23 @@ public class Exercicio5_17 {
 		int qtdVendida;
 		
 		while (sentinela != -1) {
-			System.out.println("Insira o número do produto:");
+			System.out.println("Insira o número do produto (1 a 5):");
 			numProduto = input.nextInt();
+			
+			while (numProduto < 1 || numProduto > 5) {
+				System.out.println("Input inválido");
+				System.out.println("Insira o número do produto (1 a 5):");
+				numProduto = input.nextInt();
+			}
 			
 			System.out.println("Insira a quantidade vendida:");
 			qtdVendida = input.nextInt();
+			
+			while (qtdVendida < 0) {
+				System.out.println("Input inválido");
+				System.out.println("Insira a quantidade vendida:");
+				qtdVendida = input.nextInt();
+			}
 			
 			System.out.println("Digite 1 para continuar ou -1 ver o total:");
 			sentinela = input.nextInt();
