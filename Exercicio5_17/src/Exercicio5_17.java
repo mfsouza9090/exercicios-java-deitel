@@ -16,16 +16,19 @@ public class Exercicio5_17 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		int sentinela = 1;
+		double total = 0;
 		int numProduto;
 		int qtdVendida;
-		double total = 0;
 		
-		while (sentinela > 0) {
+		while (sentinela != -1) {
 			System.out.println("Insira o número do produto:");
 			numProduto = input.nextInt();
 			
-			System.out.println("Insira a quantidade vendida ou -1 para encerrar");
+			System.out.println("Insira a quantidade vendida:");
 			qtdVendida = input.nextInt();
+			
+			System.out.println("Digite 1 para continuar ou -1 ver o total:");
+			sentinela = input.nextInt();
 			
 			switch (numProduto) {
 			case 1:
@@ -44,6 +47,8 @@ public class Exercicio5_17 {
 				total += 6.87 * qtdVendida;
 			}
 		}
+		
+		System.out.printf("Valor de varejo total: %.2f", total);
 		
 		input.close();
 	}
