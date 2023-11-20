@@ -18,27 +18,32 @@ public class Exercicio5_17 {
 		int sentinela = 1;
 		int numProduto;
 		int qtdVendida;
-		
-		Produto prod1 = new Produto(1, 2.98);
-		Produto prod2 = new Produto(2, 4.50);
-		Produto prod3 = new Produto(3, 9.98);
-		Produto prod4 = new Produto(4, 4.49);
-		Produto prod5 = new Produto(5, 6.87);
+		double total = 0;
 		
 		while (sentinela > 0) {
 			System.out.println("Insira o número do produto:");
 			numProduto = input.nextInt();
 			
-			System.out.println("Insira a quantidade vendia ou -1 para encerrar o programa:");
+			System.out.println("Insira a quantidade vendida ou -1 para encerrar");
 			qtdVendida = input.nextInt();
 			
 			switch (numProduto) {
 			case 1:
-				
+				total += 2.98 * qtdVendida;
+				break;
+			case 2:
+				total += 4.50 * qtdVendida;
+				break;
+			case 3:
+				total += 9.98 * qtdVendida;
+				break;
+			case 4:
+				total += 4.49 * qtdVendida;
+				break;
+			case 5:
+				total += 6.87 * qtdVendida;
 			}
 		}
-		
-		
 		
 		input.close();
 	}
