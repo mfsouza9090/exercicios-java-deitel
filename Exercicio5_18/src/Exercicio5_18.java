@@ -9,30 +9,26 @@
 public class Exercicio5_18 {
 
 	public static void main(String[] args) {
-		int amount = 0; 
 		int principal = 100000; 
 		int rate = 5;
+		long factor = 100;
 		
 		System.out.printf("%s%20s %n", "Year", "Amount on deposit");
 		
 		for (int year = 1; year <= 10; ++year) { 
-			int parteDecimal;
-			amount = 0;
+			long decimal = 0;
+			long whole = principal;
 		
 			for(int power = year; power > 0; power--) {
-				if(power == 1) {
-					amount += principal * (100 + rate);
-				}
-				else {
-					amount += amount * (100 + rate);
-				}
+				whole = whole * (100 + rate);
 			}
-			
-			amount /= 100;
-			parteDecimal = amount % 100;
-			amount /= 100;
-			
-			System.out.printf("%4d %20d,%d%n", year, amount, parteDecimal); 
+		
+			whole /= factor;
+			decimal = whole % factor;
+			whole /= factor;
+			factor *= 10;
+
+			System.out.printf("%4d %20d,%d%n", year, whole, decimal); 
 		}
 	} 
 
