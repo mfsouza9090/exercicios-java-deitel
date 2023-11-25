@@ -9,30 +9,33 @@
 public class Exercicio5_18 {
 
 	public static void main(String[] args) {
+		int amount;
 		int principal = 100000; 
-		int rate = 5;
-		long factor = 100;
-		long decimalFactor = 10;
+		double rate = 0.05;
 		
 		System.out.printf("%s%20s %n", "Year", "Amount on deposit");
 		
-		for (int year = 1; year <= 10; ++year) { 
-			long decimal = 0;
-			long whole = principal;
+		for (int year = 1; year <= 10; ++year) {
+			// converte o resultado para int e armazena
+			// na variável amount
+			amount = (int) (principal * Math.pow(1.0 + rate, year));
 			
-		
-			for(int power = year; power > 0; power--) {
-				whole = whole * (100 + rate);
-			}
-		
-			whole /= factor;
-			decimal = whole % factor;
-			decimal /= decimalFactor;
-			whole /= factor;
-			factor *= 10;
-			decimalFactor *= 10;
+			// obtém a parte inteira
+			int dollars = amount / 100;
+			// obtém a parte decimal
+			int cents = amount % 100;
 
-			System.out.printf("%4d %20d,%d%n", year, whole, decimal); 
+			System.out.printf("%4d%,17d.", year, dollars); 
+			
+			// adiciona um 0 caso a parte decimal seja menor 
+			// que 10 (nesse caso, não fosse a instrução abaixo,
+			// o 0 não seria mostrado)
+			if (cents < 10) {
+				System.out.printf("0%d\n", cents);
+			}
+			else {
+				System.out.printf("%d\n", cents);
+			}
 		}
 	} 
 
