@@ -12,12 +12,14 @@ public class Exercicio5_18 {
 		int principal = 100000; 
 		int rate = 5;
 		long factor = 100;
+		long decimalFactor = 10;
 		
 		System.out.printf("%s%20s %n", "Year", "Amount on deposit");
 		
 		for (int year = 1; year <= 10; ++year) { 
 			long decimal = 0;
 			long whole = principal;
+			
 		
 			for(int power = year; power > 0; power--) {
 				whole = whole * (100 + rate);
@@ -25,8 +27,10 @@ public class Exercicio5_18 {
 		
 			whole /= factor;
 			decimal = whole % factor;
+			decimal /= decimalFactor;
 			whole /= factor;
 			factor *= 10;
+			decimalFactor *= 10;
 
 			System.out.printf("%4d %20d,%d%n", year, whole, decimal); 
 		}
