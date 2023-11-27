@@ -21,4 +21,5 @@
 
 ## CAPÍTULOS E TEMAS
 
-1. Capítulo 4  - Instruções de controle: parte 1; operadores de atribuição ++ e --
+1. [Capítulo 4](https://github.com/mfsouza9090/exercicios-java-deitel/tree/master/cap_04) - Instruções de controle: parte 1; operadores de atribuição ++ e --
+2. [Capítulo 5](https://github.com/mfsouza9090/exercicios-java-deitel/tree/master/cap_05) - Instruções de controle: parte 2; operadores lógicos
