@@ -1,8 +1,9 @@
-/* (Calculando o valor de pi) Calcule o valor de S a partir 
+/* (Calculando o valor de pi) Calcule o valor de pi a partir 
  * de uma série infinita. Imprima uma tabela que mostre o valor 
  * aproximado de pi calculando os 200.000 primeiros termos dessa
  * série. Quantos termos você tem de utilizar antes de primeiro 
- * obter um valor que começa com 3,14159? */ 
+ * obter um valor que começa com 3,14159? */
+
 public class Exercicio5_20 {
 
 	public static void main(String[] args) {
@@ -10,7 +11,7 @@ public class Exercicio5_20 {
 		int diametro = 3;
 		double pi = 4;
 		boolean sinal = true;
-		int marca = 0;
+		int qtdTermos = 0;
 		
 		// cabeçalho da tabela
 		System.out.println(" ------------------------------------");
@@ -38,10 +39,10 @@ public class Exercicio5_20 {
 			String piStr = String.format("%.5f", pi);
 			boolean eIgual = piStr.equals("3,14159");
 			
-			// armazena a iteração em que o valor de pi foi
-			// 3,14159 pela primeira vez
+			// armazena na variável qtdTermos a iteração em que 
+			// o valor de pi foi 3,14159 pela primeira vez
 			if (sinal && eIgual){
-				marca = i;
+				qtdTermos = i;
 				sinal = false;
 			}
 
@@ -50,7 +51,8 @@ public class Exercicio5_20 {
 		
 		System.out.println(" ------------------------------------");
 		System.out.println();
-		System.out.printf("Marca: %d", marca);
+		System.out.printf("Quantidade de termos utilizados antes%nde obter "
+				        + "um valor que começa com 3,14159:%n%n%d", qtdTermos);
 	}
 	
 }
