@@ -6,34 +6,26 @@
 public class Exercicio5_22 {
 
 	public static void main(String[] args) {
-		for (int contador = 1; contador <= 10; contador++)
-		{
-			int asteriscos = contador;
+		for (int contador = 1; contador <= 10; contador++) {
 			
-			while (asteriscos > 0)
-			{
-				System.out.print("*");
-				asteriscos--;
+			for (int trianguloA = contador; trianguloA > 0; trianguloA--) {
+				System.out.print("A*");;
 			}
 			
-			for (int contador1 = 10; contador1 > 0; contador1--) {
-				int asteriscos1 = contador1;
-				int espacos1 = 9 - (contador1 - 1);
-				
-				while (espacos1 > 0) {
-					System.out.print(" ");
-					espacos1--;
-				}
-				
-				while (asteriscos1 > 0) {
-					System.out.print("*");
-					asteriscos1--;
-				}
-				System.out.println();
+			for (int trianguloC = 10 - contador; trianguloC > 0; trianguloC--) {
+				System.out.print("C*");
 			}
+			
+			for (int trianguloB = 10 - contador; trianguloB > 0; trianguloB--) {
+				System.out.print("B*");
+			}
+			
+			for (int trianguloD = contador; trianguloD > 0; trianguloD--) {
+				System.out.print("D*");
+			}
+			
+			System.out.println();
 		}
-		
-		
 	}
-
+	
 }
