@@ -17,11 +17,31 @@ public class Exercicio5_23 {
 		// a) !(x < 5) && !(y >= 7)
 		int x = 4;
 		int y = 7;
-		boolean a = !(x < 5) && !(y >= 7);
-		boolean b = !(x < 5) || !(y >= 7);
+		boolean aExpOriginal = !(x < 5) && !(y >= 7);
+		boolean aLeiMorgan = !(x < 5) || !(y >= 7);
 		
 		System.out.printf("Expressão original: !(x < 5) && !(y >= 7) = %b%n"
-				        + "Aplicação da Lei de Morgan: !(x < 5) || !(y >= 7) = %b%n", a, b);
+				        + "Aplicação da Lei de Morgan: !(x < 5) || !(y >= 7) = %b%n", aExpOriginal, aLeiMorgan);
+		System.out.println();
+		
+		// b) !(a == b) || !(g != 5)
+		int a = 5;
+		int b = 5;
+		int g = 6;
+		boolean bExpOriginal = !(a == b) || !(g != 5);
+		boolean bLeiMorgan = !(a == b) && !(g != 5);
+		
+		System.out.printf("Expressão original: !(a == b) || !(g != 5) = %b%n"
+				        + "Aplicação da Lei de Morgan: !(a == b) && !(g != 5) = %b%n", bExpOriginal, bLeiMorgan);
+		System.out.println();
+		
+		// c) !((x <= 8) && (y > 4))
+		boolean cExpOriginal = !((x <= 8) && (y > 4));
+		boolean cLeiMorgan = !((x <= 8) || (y > 4));
+		
+		System.out.printf("Expressão original: !((x <= 8) && (y > 4)) = %b%n"
+				        + "Aplicação da Lei de Morgan: !((x <= 8) || (y > 4)) = %b", cExpOriginal, cLeiMorgan);
+		System.out.println();
 	}
 
 }
