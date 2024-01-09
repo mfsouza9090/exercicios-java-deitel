@@ -6,10 +6,15 @@
  * instruções de saída */
 
 public class Exercicio5_24 {
-
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		for (int linha = 1; linha <= 9; linha++) {
+			System.out.print("l");
+			for (int coluna = 1; coluna <= 9; coluna++) {
+				System.out.print("c");
+			}
+			System.out.println();
+		}
 	}
 
 }
